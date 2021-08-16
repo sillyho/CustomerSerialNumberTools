@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="序列化">
+      <UniqueIdentifier>{997f7dae-7fda-42af-9f22-00fccb361d72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CustomSerialNumber.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>序列化</Filter>
+    </ClCompile>
+    <ClCompile Include="SerializeTool.cpp">
+      <Filter>序列化</Filter>
+    </ClCompile>
+    <ClCompile Include="CDateItem.cpp">
+      <Filter>序列化</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixedItem.cpp">
+      <Filter>序列化</Filter>
+    </ClCompile>
+    <ClCompile Include="CSerialItem.cpp">
+      <Filter>序列化</Filter>
+    </ClCompile>
+    <ClCompile Include="CDateItemDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CFixItemDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CSerialItemDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectListDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CManagerDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\CustomSerialNumber.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomSerialNumber.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>序列化</Filter>
+    </ClInclude>
+    <ClInclude Include="SerializeTool.h">
+      <Filter>序列化</Filter>
+    </ClInclude>
+    <ClInclude Include="CDateItem.h">
+      <Filter>序列化</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixedItem.h">
+      <Filter>序列化</Filter>
+    </ClInclude>
+    <ClInclude Include="CSerialItem.h">
+      <Filter>序列化</Filter>
+    </ClInclude>
+    <ClInclude Include="CDateItemDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CFixItemDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CSerialItemDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjectListDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CManagerDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CustomSerialNumber.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
