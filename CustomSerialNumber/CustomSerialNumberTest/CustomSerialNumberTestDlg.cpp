@@ -76,10 +76,8 @@ BEGIN_MESSAGE_MAP(CCustomSerialNumberTestDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON_AddOrModify, &CCustomSerialNumberTestDlg::OnBnClickedButtonAddormodify)
 	ON_WM_DESTROY()
-	ON_BN_CLICKED(IDC_BUTTON_Del, &CCustomSerialNumberTestDlg::OnBnClickedButtonDel)
 	ON_BN_CLICKED(IDC_BUTTON_Get, &CCustomSerialNumberTestDlg::OnBnClickedButtonGet)
-	ON_BN_CLICKED(IDC_BUTTON_Del3, &CCustomSerialNumberTestDlg::OnBnClickedButtonDel3)
-	ON_BN_CLICKED(IDC_BUTTON_Del4, &CCustomSerialNumberTestDlg::OnBnClickedButtonDel4)
+	ON_BN_CLICKED(IDC_BUTTON_Del, &CCustomSerialNumberTestDlg::OnBnClickedButtonDel)
 END_MESSAGE_MAP()
 
 
@@ -184,7 +182,10 @@ HCURSOR CCustomSerialNumberTestDlg::OnQueryDragIcon()
 
 void CCustomSerialNumberTestDlg::OnBnClickedButtonAddormodify()
 {
-	SetCustomSerialNumber(("测试"));
+	if (SetCustomSerialNumber != NULL)
+	{
+		SetCustomSerialNumber(("测试"));
+	}
 }
 
 
@@ -195,42 +196,33 @@ void CCustomSerialNumberTestDlg::OnDestroy()
 
 }
 
+void CCustomSerialNumberTestDlg::OnBnClickedButtonGet()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	if (GetCustomSerialNumber != NULL)
+	{
+		char* pData = GetCustomSerialNumber("测试", 1);
+		if (pData == NULL)
+			return;
+
+		CString strData(pData);
+
+		AfxMessageBox(strData);
+
+		//获取内容成功后，一定要外部显示调用释放接口
+		if (FreeMemory != NULL)
+		{
+			FreeMemory(pData);
+		}
+	}
+}
+
 
 void CCustomSerialNumberTestDlg::OnBnClickedButtonDel()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	char* pData = GetCustomSerialNumber("测试", 1);
-	if (pData == NULL)
-		return;
-
-	CString strData(pData);
-
-	AfxMessageBox(strData);
-
-	//获取内容成功后，一定要外部显示调用释放接口
-	FreeMemory(pData);
-
-	
-}
-
-
-void CCustomSerialNumberTestDlg::OnBnClickedButtonGet()
-{
-
-}
-
-
-void CCustomSerialNumberTestDlg::OnBnClickedButtonDel3()
-{
-	DelCustomSerialNumber("测试");
-}
-
-
-void CCustomSerialNumberTestDlg::OnBnClickedButtonDel4()
-{
-	// TODO: 在此添加控件通知处理程序代码
-
-
-	
-	
+	if (DelCustomSerialNumber != NULL)
+	{
+		DelCustomSerialNumber("测试");
+	}
 }
