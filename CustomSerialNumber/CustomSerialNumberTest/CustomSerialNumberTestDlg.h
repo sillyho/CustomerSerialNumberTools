@@ -37,8 +37,6 @@ protected:
 public:
 	afx_msg void OnBnClickedButtonAddormodify();
 	afx_msg void OnDestroy();
-	afx_msg void OnBnClickedButtonDel();
 	afx_msg void OnBnClickedButtonGet();
-	afx_msg void OnBnClickedButtonDel3();
-	afx_msg void OnBnClickedButtonDel4();
+	afx_msg void OnBnClickedButtonDel();
 };
