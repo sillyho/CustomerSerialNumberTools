@@ -69,6 +69,9 @@ void CSerialItemDialog::OnBnClickedOk()
 	GetDlgItemText(IDC_EDIT_NAME, strValue);
 	m_pSerialItem->m_CharacterCollection = strValue;
 
+	GetDlgItemText(IDC_EDIT_LEN, strValue);
+	m_pSerialItem->m_StringLength = (UINT)(_ttoi(strValue));
+
 	GetDlgItemText(IDC_EDIT_CUR, strValue);
 	m_pSerialItem->m_curOctValue = m_pSerialItem->AnyToOct(strValue);
 
@@ -78,8 +81,7 @@ void CSerialItemDialog::OnBnClickedOk()
 	GetDlgItemText(IDC_EDIT_MAX, strValue);
 	m_pSerialItem->m_OctMaxValue = m_pSerialItem->AnyToOct(strValue);
 
-	GetDlgItemText(IDC_EDIT_LEN, strValue);
-	m_pSerialItem->m_StringLength = (UINT)(_ttoi(strValue));
+
 	if (((CButton*)GetDlgItem(IDC_CHECK_CIR))->GetCheck() == BST_CHECKED)
 	{
 		m_pSerialItem->m_bCirculate = TRUE;
